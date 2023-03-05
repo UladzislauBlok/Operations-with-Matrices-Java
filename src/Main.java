@@ -5,9 +5,8 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int row = scan.nextInt();
         int col = scan.nextInt();
-        Matrix mat2 = new Matrix(row, col);
-        mat2.SetMatrixByRand();
-        mat2.printMatrix();
-        scan.close();
+        Matrix mat = new Matrix(row, col);
+        mat.SetMatrixByRand();
+        mat.cyclicMatrixShift();
     }
 }
