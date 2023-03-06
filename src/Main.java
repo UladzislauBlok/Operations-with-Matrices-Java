@@ -6,7 +6,8 @@ public class Main {
         int row = scan.nextInt();
         int col = scan.nextInt();
         Matrix mat = new Matrix(row, col);
-        mat.SetMatrixByRand();
-        mat.cyclicMatrixShift();
+        MatrixOperation matOp = new MatrixOperation();
+        mat.SetMatrixByUser();
+        matOp.printDeterminant(mat);
     }
 }
