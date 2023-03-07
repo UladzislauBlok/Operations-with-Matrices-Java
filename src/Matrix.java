@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class Matrix {
 
-    private int [][] matrix;
-    private int rowsNum;
-    private int columnsNum;
+    private final int [][] matrix;
+    private final int rowsNum;
+    private final int columnsNum;
     Scanner scan = new Scanner(System.in);
     Matrix(int rowsNum, int columnsNum){
         this.rowsNum = rowsNum;
@@ -66,11 +66,12 @@ public class Matrix {
     {
         for(int row = 0; row < rowsNum; row++)
         {
+            System.out.print("|\t");
             for(int col = 0; col < columnsNum; col++)
             {
                 System.out.print(matrix[row][col] + "\t");
             }
-            System.out.println('\n');
+            System.out.println("\t|\n");
         }
     }
 }

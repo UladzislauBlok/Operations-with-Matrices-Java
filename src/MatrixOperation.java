@@ -23,6 +23,62 @@ public class MatrixOperation {
         tempMatrix.printMatrix();
     }
 
+    Matrix minusMat(Matrix sourceMat) // function to take the minus out of the matrix
+    {
+        Matrix mat = new Matrix(sourceMat.getRowsNum(), sourceMat.getColumnsNum());
+        for (int row = 0 ; row < sourceMat.getRowsNum(); row++)
+        {
+            for (int col = 0; col < sourceMat.getColumnsNum(); col++) {
+                mat.setElem(row, col, -sourceMat.getElem(row, col));
+            }
+        }
+        return mat;
+    }
+
+    void printMinusMat(Matrix sourceMat)
+    {
+        minusMat(sourceMat).printMatrix();
+    }
+
+    Matrix multiplicationByNum(Matrix sourceMat) // function for multiplying a matrix by a number
+    {
+        Matrix mat = new Matrix(sourceMat.getRowsNum(), sourceMat.getColumnsNum());
+
+        System.out.println("Enter the number by which you want to multiply the matrix: ");
+        int num;
+        num = scan.nextInt();
+
+        for (int row = 0 ; row < sourceMat.getRowsNum(); row++)
+        {
+        for (int col = 0 ; col < sourceMat.getColumnsNum(); col++) {
+            mat.setElem(row, col, sourceMat.getElem(row, col) * num);
+        }}
+        return mat;
+    }
+
+    void printMultiplicationByNum(Matrix sourceMat)
+    {
+        multiplicationByNum(sourceMat).printMatrix();
+    }
+
+    Matrix transpose(Matrix sourceMat)
+    {
+        Matrix mat = new Matrix(sourceMat.getColumnsNum(), sourceMat.getRowsNum()); // Swap row and col to create a transpose matrix
+
+        for (int row = 0; row < sourceMat.getRowsNum(); row++)
+        {
+        for (int col = 0; col < sourceMat.getColumnsNum(); col++) {
+            mat.setElem(col, row, sourceMat.getElem(row, col)); // Assign elements from rows to columns
+        }}
+        return mat;
+    }
+
+    void printTranspose(Matrix sourceMat)
+    {
+        transpose(sourceMat).printMatrix();
+    }
+
+
     int determinant(Matrix sourceMatrix)
     {
         int columnsNum = sourceMatrix.getColumnsNum();
