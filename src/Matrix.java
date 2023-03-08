@@ -28,7 +28,7 @@ public class Matrix {
         return  rowsNum;
     }
 
-    void SetMatrixByUser() //Function for setting matrix values through the user
+    void setMatrixByUser() //Function for setting matrix values through the user
     {
         System.out.println("Enter the element under the index you specified and press <Enter>:");
         for(int row = 0; row < rowsNum; row++)
@@ -42,7 +42,7 @@ public class Matrix {
         printMatrix();
     }
 
-    void SetMatrixByRand() // Function for setting matrix values with random numbers from -number of rows to +number of columns
+    void setMatrixByRand() // Function for setting matrix values with random numbers from -number of rows to +number of columns
     {
         System.out.println("This method fills the function with values from -number of rows to +number of columns");
         for(int row = 0; row < rowsNum; row++)
